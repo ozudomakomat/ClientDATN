@@ -1,0 +1,122 @@
+[
+ {
+   "id": 0,
+   "name": "B12.5",
+   "mac": 150,
+   "cdcn": 7.5,
+   "cdck": 0.66,
+   "mddh": 21000,
+   "fcubs": 16.79,
+   "fcuaci": 9.75
+ },
+ {
+   "id": 1,
+   "name": "B15",
+   "mac": 200,
+   "cdcn": 8.5,
+   "cdck": 0.75,
+   "mddh": 23000,
+   "fcubs": 19.03,
+   "fcuaci": 11.05
+ },
+ {
+   "id": 2,
+   "name": "B20",
+   "mac": 250,
+   "cdcn": 11.5,
+   "cdck": 0.9,
+   "mddh": 27000,
+   "fcubs": 25.75,
+   "fcuaci": 14.95
+ },
+ {
+   "id": 3,
+   "name": "B22.5",
+   "mac": 300,
+   "cdcn": 13,
+   "cdck": 975,
+   "mddh": 28500,
+   "fcubs": 29.1,
+   "fcuaci": 16.9
+ },
+ {
+   "id": 4,
+   "name": "B25",
+   "mac": 350,
+   "cdcn": 14.5,
+   "cdck": 1.05,
+   "mddh": 30000,
+   "fcubs": 32.46,
+   "fcuaci": 18.85
+ },
+ {
+   "id": 5,
+   "name": "B30",
+   "mac": 400,
+   "cdcn": 17,
+   "cdck": 1.2,
+   "mddh": 32500,
+   "fcubs": 38.06,
+   "fcuaci": 22.1
+ },
+ {
+   "id": 6,
+   "name": "B35",
+   "mac": 450,
+   "cdcn": 19.5,
+   "cdck": 1.3,
+   "mddh": 34500,
+   "fcubs": 43.66,
+   "fcuaci": 25.35
+ },
+ {
+   "id": 7,
+   "name": "B40",
+   "mac": 500,
+   "cdcn": 22,
+   "cdck": 1.4,
+   "mddh": 36000,
+   "fcubs": 49.25,
+   "fcuaci": 28.6
+ },
+ {
+   "id": 8,
+   "name": "B45",
+   "mac": 600,
+   "cdcn": 25,
+   "cdck": 1.45,
+   "mddh": 37000,
+   "fcubs": 55.97,
+   "fcuaci": 32.5
+ },
+ {
+   "id": 9,
+   "name": "B50",
+   "mac": 700,
+   "cdcn": 27.5,
+   "cdck": 1.55,
+   "mddh": 39000,
+   "fcubs": 61.57,
+   "fcuaci": 35.75
+ },
+ {
+   "id": 10,
+   "name": "B55",
+   "mac": 700,
+   "cdcn": 30,
+   "cdck": 1.6,
+   "mddh": 39500,
+   "fcubs": 67.16,
+   "fcuaci": 39
+ },
+ {
+   "id": 11,
+   "name": "B60",
+   "mac": 800,
+   "cdcn": 33,
+   "cdck": 1.65,
+   "mddh": 40000,
+   "fcubs": 73.88,
+   "fcuaci": 42.9
+ }
+]

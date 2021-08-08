@@ -56,24 +56,103 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Network\DataSender.cs" />
-    <Compile Include="Assets\Scripts\Network\NetworkController.cs" />
-    <Compile Include="Assets\Scripts\Network\INetEventHandler.cs" />
-    <Compile Include="Assets\Scripts\Constants.cs" />
-    <Compile Include="Assets\Scripts\Utils.cs" />
-    <Compile Include="Assets\Scripts\CanvasHelper.cs" />
-    <Compile Include="Assets\Scripts\MD5CryptoServiceProvider.cs" />
-    <Compile Include="Assets\Scripts\iTween.cs" />
-    <Compile Include="Assets\Scripts\iTweenHelper.cs" />
-    <Compile Include="Assets\Scripts\SimpleJSON.cs" />
-    <Compile Include="Assets\Scripts\JSONHelper.cs" />
-    <Compile Include="Assets\Scripts\BattleLogSender.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
+    <Compile Include="Assets\Scripts\Game\EffectBuffPlayer.cs" />
+    <Compile Include="Assets\Scripts\Common\UIPool\PoolObject.cs" />
+    <Compile Include="Assets\Scripts\Game\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Common\UIPool\HorizontalPoolGroup.cs" />
+    <Compile Include="Assets\NPLibrary\EventDispatcher\EventListener.cs" />
+    <Compile Include="Assets\NPLibrary\MainThread\Interface\IManager.cs" />
+    <Compile Include="Assets\Scripts\Common\Manager\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Game\BaseScene.cs" />
+    <Compile Include="Assets\Scripts\Common\SaveData.cs" />
+    <Compile Include="Assets\Scripts\Common\UITransition\UITransition.cs" />
+    <Compile Include="Assets\Scripts\Common\GameResource\RewardSprite.cs" />
+    <Compile Include="Assets\NPLibrary\EventDispatcher\EventDispatcher.cs" />
+    <Compile Include="Assets\NPLibrary\MainThread\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Common\LocalNotificationManager.cs" />
+    <Compile Include="Assets\NPLibrary\EventDispatcher\EventDataBinder.cs" />
+    <Compile Include="Assets\NPLibrary\Test\UI\iPhoneX.cs" />
+    <Compile Include="Assets\Scripts\Common\UIPool\HorizontalOrVerticalPoolGroup.cs" />
+    <Compile Include="Assets\Scripts\Common\Utils.cs" />
+    <Compile Include="Assets\Scripts\Common\Manager\DbManager.cs" />
+    <Compile Include="Assets\Scripts\Common\UITransition\GOStateEvent.cs" />
+    <Compile Include="Assets\Scripts\Game\PopupEndGame.cs" />
+    <Compile Include="Assets\Scripts\Common\Test\FPSDisplay.cs" />
+    <Compile Include="Assets\Scripts\Common\LoadAssetBundles.cs" />
+    <Compile Include="Assets\Scripts\Common\Constant.cs" />
+    <Compile Include="Assets\Scripts\Common\SimpleJSON.cs" />
+    <Compile Include="Assets\Scripts\Common\BGScaler.cs" />
+    <Compile Include="Assets\Scripts\Common\UITransition\UIRotate.cs" />
+    <Compile Include="Assets\Scripts\Game\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Common\ResourceHelper.cs" />
+    <Compile Include="Assets\Scripts\Game\PopupSetting.cs" />
+    <Compile Include="Assets\Scripts\Common\AssetBundleManager.cs" />
+    <Compile Include="Assets\Scripts\Game\CharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\Common\UITransition\UIAnchor.cs" />
+    <Compile Include="Assets\Scripts\Common\BasePopup.cs" />
+    <Compile Include="Assets\Scripts\Common\Global.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
+    <Compile Include="Assets\NPLibrary\EventDispatcher\ReflectionUtils.cs" />
+    <Compile Include="Assets\Scripts\Common\GameResource\GameResource.cs" />
+    <Compile Include="Assets\NPLibrary\EventDispatcher\PriorityList.cs" />
+    <Compile Include="Assets\Scripts\Common\ReScaleCanvas.cs" />
+    <Compile Include="Assets\Scripts\Common\GameResource\PrefabsResource.cs" />
+    <Compile Include="Assets\NPLibrary\MainThread\Interface\SubManager.cs" />
+    <Compile Include="Assets\Scripts\Common\UIPool\GridPoolGroup.cs" />
+    <Compile Include="Assets\Scripts\Common\PoolManager.cs" />
+    <Compile Include="Assets\Scripts\Common\UIPool\UIHelperEnum.cs" />
+    <Compile Include="Assets\Scripts\Game\PopupCheckIn.cs" />
+    <Compile Include="Assets\Scripts\Common\Manager\TestManager.cs" />
+    <Compile Include="Assets\NPLibrary\EventDispatcher\Member.cs" />
+    <Compile Include="Assets\Scripts\Common\UITransition\UIColor.cs" />
+    <Compile Include="Assets\Scripts\Common\SafeArea.cs" />
+    <Compile Include="Assets\NPLibrary\EventDispatcher\EventName.cs" />
+    <Compile Include="Assets\NPLibrary\Test\Screenshoter.cs" />
+    <Compile Include="Assets\Scripts\Common\SafeAreaAdapter.cs" />
+    <Compile Include="Assets\NPLibrary\EventDispatcher\PriorityEventDispatcher.cs" />
+    <Compile Include="Assets\Scripts\Game\RewardController.cs" />
+    <Compile Include="Assets\Scripts\Common\iTween.cs" />
+    <Compile Include="Assets\Scripts\Common\UIPool\VerticalPoolGroup.cs" />
+    <Compile Include="Assets\Scripts\Common\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Common\GameResource\DataReward.cs" />
+    <Compile Include="Assets\Scripts\Common\Manager\Game.cs" />
+    <Compile Include="Assets\Scripts\Common\Manager\GameLoader.cs" />
+    <Compile Include="Assets\Scripts\Common\UITransition\UITween.cs" />
+    <Compile Include="Assets\NPLibrary\MainThread\Interface\Manager.cs" />
+    <Compile Include="Assets\NPLibrary\Test\UI\Device.cs" />
+    <Compile Include="Assets\Scripts\Game\PopupPause.cs" />
+    <Compile Include="Assets\Scripts\Common\CanvasHelper.cs" />
+    <Compile Include="Assets\Scripts\Game\EffectPlayer.cs" />
+    <Compile Include="Assets\Scripts\Common\iTweenHelper.cs" />
+    <Compile Include="Assets\Scripts\Common\UIPool\BasePoolGroup.cs" />
+    <Compile Include="Assets\Scripts\Common\UITransition\UIFade.cs" />
+    <Compile Include="Assets\Scripts\Common\UITransition\UIScale.cs" />
+    <Compile Include="Assets\Scripts\PopupThuVien.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Scripts\ItemCellThuVien.cs" />
+    <Compile Include="Assets\Scripts\HomeScene.cs" />
+    <Compile Include="Assets\Scripts\PopupInfo.cs" />
+    <Compile Include="Assets\Scripts\Entity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DLL\Person.dll" />
     <None Include="Assets\DLL\PbMethodSerializer.dll" />
+    <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.dll" />
+    <None Include="Assets\Resources\DB\db_cdt.txt" />
     <None Include="Assets\DLL\PersonSerializer.dll" />
     <None Include="Assets\DLL\PbMethodLib.dll" />
+    <None Include="Assets\Demigiant\DOTween\DOTween.dll" />
+    <None Include="Assets\Resources\DB\db_cdbt.txt" />
+    <None Include="Assets\Demigiant\DOTweenPro\DOTweenPro.dll" />
     <None Include="Assets\DLL\protobuf-net.dll" />
   </ItemGroup>
   <ItemGroup>
@@ -299,6 +378,9 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+    </Reference>
     <Reference Include="PbMethodLib">
       <HintPath>Assets\DLL\PbMethodLib.dll</HintPath>
     </Reference>
@@ -314,8 +396,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+    </Reference>
     <Reference Include="protobuf-net">
       <HintPath>Assets\DLL\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.10f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

@@ -1,0 +1,24 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+using UnityEngine.SceneManagement;
+
+public class BaseScene : MonoBehaviour
+{
+    protected virtual void Start() { 
+        
+    }
+    protected virtual void Awake()
+    {
+
+    }
+    protected void LoadScene(string SceneName, bool playMusicScene = false, float volumn = 1f)
+    {
+        SceneManager.LoadScene(SceneName);
+        if (playMusicScene) {
+            AudioClip sceneMusic = Utils.LoadAudioClip(SceneName);
+            SoundManager.Instance.PlayMusicClip(sceneMusic, volumn);
+        }
+    }
+}

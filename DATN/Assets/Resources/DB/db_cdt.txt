@@ -1,0 +1,83 @@
+[
+ {
+   "id": 0,
+   "name": "CI,A-I",
+   "rsn": 235,
+   "mddh": 210000,
+   "cdcn": 225,
+   "cdcntd": 225,
+   "cdcntdd": 175
+ },
+ {
+   "id": 1,
+   "name": "CII,A-II",
+   "rsn": 295,
+   "mddh": 210000,
+   "cdcn": 280,
+   "cdcntd": 280,
+   "cdcntdd": 225
+ },
+ {
+   "id": 2,
+   "name": "A-III(6-8)",
+   "rsn": 390,
+   "mddh": 200000,
+   "cdcn": 355,
+   "cdcntd": 355,
+   "cdcntdd": 285
+ },
+ {
+   "id": 3,
+   "name": "CIII,A-III(10-40)",
+   "rsn": 390,
+   "mddh": 200000,
+   "cdcn": 365,
+   "cdcntd": 365,
+   "cdcntdd": 290
+ },
+ {
+   "id": 4,
+   "name": "CIV, A-IV",
+   "rsn": 590,
+   "mddh": 190000,
+   "cdcn": 450,
+   "cdcntd": 510,
+   "cdcntdd": 405
+ },
+ {
+   "id": 5,
+   "name": "A-VI",
+   "rsn": 788,
+   "mddh": 190000,
+   "cdcn": 500,
+   "cdcntd": 680,
+   "cdcntdd": 545
+ },
+ {
+   "id": 6,
+   "name": "AT-VII",
+   "rsn": 1175,
+   "mddh": 190000,
+   "cdcn": 500,
+   "cdcntd": 980,
+   "cdcntdd": 785
+ },
+ {
+   "id": 7,
+   "name": "A-IIIB( kiểm soat độ dãn dài và ứng suất)",
+   "rsn": 540,
+   "mddh": 180000,
+   "cdcn": 200,
+   "cdcntd": 490,
+   "cdcntdd": 390
+ },
+ {
+   "id": 8,
+   "name": "A-IIIB( chỉ kiểm soát độ giãn dài )",
+   "rsn": 540,
+   "mddh": 180000,
+   "cdcn": 200,
+   "cdcntd": 450,
+   "cdcntdd": 360
+ }
+]
