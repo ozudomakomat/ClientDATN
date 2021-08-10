@@ -19,5 +19,9 @@ public class HomeScene : MonoBehaviour
     {
         PopupInfo.ShowUp();
     }
+    public void ButtonCaculatorClick()
+    {
+        PopupCaculator.ShowUp();
+    }
     #endregion
 }

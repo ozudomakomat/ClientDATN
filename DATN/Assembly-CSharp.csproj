@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
+    <Compile Include="Assets\Scripts\PanelConcrete.cs" />
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
     <Compile Include="Assets\Scripts\Game\EffectBuffPlayer.cs" />
     <Compile Include="Assets\Scripts\Common\UIPool\PoolObject.cs" />
@@ -75,7 +76,10 @@
     <Compile Include="Assets\NPLibrary\EventDispatcher\EventDataBinder.cs" />
     <Compile Include="Assets\NPLibrary\Test\UI\iPhoneX.cs" />
     <Compile Include="Assets\Scripts\Common\UIPool\HorizontalOrVerticalPoolGroup.cs" />
+    <Compile Include="Assets\Scripts\Entity.cs" />
     <Compile Include="Assets\Scripts\Common\Utils.cs" />
+    <Compile Include="Assets\Scripts\PopupInfo.cs" />
+    <Compile Include="Assets\Scripts\PopupCaculator.cs" />
     <Compile Include="Assets\Scripts\Common\Manager\DbManager.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\GOStateEvent.cs" />
     <Compile Include="Assets\Scripts\Game\PopupEndGame.cs" />
@@ -93,6 +97,7 @@
     <Compile Include="Assets\Scripts\Common\UITransition\UIAnchor.cs" />
     <Compile Include="Assets\Scripts\Common\BasePopup.cs" />
     <Compile Include="Assets\Scripts\Common\Global.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
     <Compile Include="Assets\NPLibrary\EventDispatcher\ReflectionUtils.cs" />
@@ -108,40 +113,38 @@
     <Compile Include="Assets\Scripts\Common\Manager\TestManager.cs" />
     <Compile Include="Assets\NPLibrary\EventDispatcher\Member.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UIColor.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Scripts\Common\SafeArea.cs" />
     <Compile Include="Assets\NPLibrary\EventDispatcher\EventName.cs" />
     <Compile Include="Assets\NPLibrary\Test\Screenshoter.cs" />
+    <Compile Include="Assets\Scripts\HomeScene.cs" />
     <Compile Include="Assets\Scripts\Common\SafeAreaAdapter.cs" />
     <Compile Include="Assets\NPLibrary\EventDispatcher\PriorityEventDispatcher.cs" />
     <Compile Include="Assets\Scripts\Game\RewardController.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Scripts\Common\iTween.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Scripts\Common\UIPool\VerticalPoolGroup.cs" />
     <Compile Include="Assets\Scripts\Common\Singleton.cs" />
     <Compile Include="Assets\Scripts\Common\GameResource\DataReward.cs" />
     <Compile Include="Assets\Scripts\Common\Manager\Game.cs" />
     <Compile Include="Assets\Scripts\Common\Manager\GameLoader.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UITween.cs" />
+    <Compile Include="Assets\Scripts\ItemCellThuVien.cs" />
     <Compile Include="Assets\NPLibrary\MainThread\Interface\Manager.cs" />
     <Compile Include="Assets\NPLibrary\Test\UI\Device.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\Game\PopupPause.cs" />
     <Compile Include="Assets\Scripts\Common\CanvasHelper.cs" />
     <Compile Include="Assets\Scripts\Game\EffectPlayer.cs" />
     <Compile Include="Assets\Scripts\Common\iTweenHelper.cs" />
     <Compile Include="Assets\Scripts\Common\UIPool\BasePoolGroup.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UIFade.cs" />
-    <Compile Include="Assets\Scripts\Common\UITransition\UIScale.cs" />
     <Compile Include="Assets\Scripts\PopupThuVien.cs" />
-    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
-    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
-    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
-    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
-    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-    <Compile Include="Assets\Scripts\ItemCellThuVien.cs" />
-    <Compile Include="Assets\Scripts\HomeScene.cs" />
-    <Compile Include="Assets\Scripts\PopupInfo.cs" />
-    <Compile Include="Assets\Scripts\Entity.cs" />
+    <Compile Include="Assets\Scripts\Common\UITransition\UIScale.cs" />
+    <Compile Include="Assets\Scripts\PanelSteel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DLL\Person.dll" />
@@ -390,6 +393,9 @@
     <Reference Include="PbMethodSerializer">
       <HintPath>Assets\DLL\PbMethodSerializer.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="PersonSerializer">
       <HintPath>Assets\DLL\PersonSerializer.dll</HintPath>
     </Reference>
@@ -401,9 +407,6 @@
     </Reference>
     <Reference Include="protobuf-net">
       <HintPath>Assets\DLL\protobuf-net.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.10f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

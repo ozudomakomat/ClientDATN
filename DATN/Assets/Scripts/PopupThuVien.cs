@@ -22,10 +22,8 @@ public class PopupThuVien : BasePopup
             };
         });
     }
-
     protected override void Start()
     {
-        base.Start();
         if (m_GoCellPrefab != null)
         {
             m_GoCellPrefab.SetActive(false);
@@ -44,7 +42,13 @@ public class PopupThuVien : BasePopup
         }
         return data;
     }
-    
+
+    public override void ClosePopup()
+    {
+        m_GoContent.GetComponent<UITransition>().DoHide();
+        Destroy(gameObject, 0.2f);
+    }
+
     public static PopupThuVien ShowUp()
     {
         GameObject prefab = Utils.LoadPrefab("Prefabs/PopupThuVien");

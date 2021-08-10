@@ -17,7 +17,7 @@ public class BasePopup : MonoBehaviour
             iTweenHelper.MakeScale(m_GoContent, 0.7f, 1f, 0.1f);
         }
     }
-    public void ClosePopup()
+    public virtual void ClosePopup()
     {
         Vector2 to = new Vector2(transform.position.x, transform.position.y + SaveData.heigthCanvas);
         iTweenHelper.MakeScale(m_GoContent, 1f, 0.7f, 0.1f);
