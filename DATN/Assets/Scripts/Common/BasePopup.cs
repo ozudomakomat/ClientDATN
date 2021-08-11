@@ -14,13 +14,13 @@ public class BasePopup : MonoBehaviour
     {
         if (m_GoContent != null)
         {
-            iTweenHelper.MakeScale(m_GoContent, 0.7f, 1f, 0.1f);
+            iTweenHelper.MakeScale(m_GoContent, 0.8f, 1f, 0.1f);
         }
     }
     public virtual void ClosePopup()
     {
         Vector2 to = new Vector2(transform.position.x, transform.position.y + SaveData.heigthCanvas);
-        iTweenHelper.MakeScale(m_GoContent, 1f, 0.7f, 0.1f);
+        iTweenHelper.MakeScale(m_GoContent, 1f, 0.8f, 0.1f);
         Destroy(gameObject, 0.1f);
     }
     protected void LoadScene(string nameScene)

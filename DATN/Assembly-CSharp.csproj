@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Game\CameraController.cs" />
     <Compile Include="Assets\Scripts\Common\ResourceHelper.cs" />
     <Compile Include="Assets\Scripts\Game\PopupSetting.cs" />
+    <Compile Include="Assets\Scripts\PanelSteel.cs" />
     <Compile Include="Assets\Scripts\Common\AssetBundleManager.cs" />
     <Compile Include="Assets\Scripts\Game\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UIAnchor.cs" />
@@ -144,7 +145,9 @@
     <Compile Include="Assets\Scripts\Common\UITransition\UIFade.cs" />
     <Compile Include="Assets\Scripts\PopupThuVien.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UIScale.cs" />
-    <Compile Include="Assets\Scripts\PanelSteel.cs" />
+    <Compile Include="Assets\Scripts\PopupTraBeTong.cs" />
+    <Compile Include="Assets\Scripts\PanelBetong.cs" />
+    <Compile Include="Assets\Scripts\PopupTraThep.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DLL\Person.dll" />

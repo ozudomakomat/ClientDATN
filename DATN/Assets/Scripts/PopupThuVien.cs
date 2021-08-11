@@ -17,8 +17,17 @@ public class PopupThuVien : BasePopup
             cell.SetData((ItemCellTVInfo)data);
             cell.callback = delegate (int id)
             {
-                // show popup infos
                 Debug.Log("id click = " + id);
+                if (id == 0)
+                {
+                    PopupTraBeTong.ShowUp();
+                    ClosePopup();
+                }
+                else if (id == 1)
+                {
+                    PopupTraThep.ShowUp();
+                    ClosePopup();
+                }
             };
         });
     }
