@@ -16,16 +16,16 @@ public class ResourceHelper
             return "";
     }
 
-    public static void EditDbText(string fileDb, string textAsset)
-    {
-        if (string.IsNullOrEmpty(textAsset))
-        {
-            Debug.Log("Text content is null");
-            return;
-        }
-        string pathDbFile = "DB/" + fileDb;
-        TextAsset txtPath = Resources.Load<TextAsset>(pathDbFile);
-        File.WriteAllText(AssetDatabase.GetAssetPath(txtPath), textAsset);
-        EditorUtility.SetDirty(txtPath);
-    }
+    //public static void EditDbText(string fileDb, string textAsset)
+    //{
+    //    if (string.IsNullOrEmpty(textAsset))
+    //    {
+    //        Debug.Log("Text content is null");
+    //        return;
+    //    }
+    //    string pathDbFile = "DB/" + fileDb;
+    //    TextAsset txtPath = Resources.Load<TextAsset>(pathDbFile);
+    //    File.WriteAllText(AssetDatabase.GetAssetPath(txtPath), textAsset);
+    //    EditorUtility.SetDirty(txtPath);
+    //}
 }

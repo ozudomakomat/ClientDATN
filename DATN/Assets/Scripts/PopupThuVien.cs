@@ -28,6 +28,7 @@ public class PopupThuVien : BasePopup
                     PopupTraThep.ShowUp();
                     ClosePopup();
                 }
+                else Toast.ShowUp("Tính năng đang trong quá trình phát triển");
             };
         });
     }

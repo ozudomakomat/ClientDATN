@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Common\Manager\DbManager.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\GOStateEvent.cs" />
     <Compile Include="Assets\Scripts\Game\PopupEndGame.cs" />
+    <Compile Include="Assets\Scripts\PopupTraThep.cs" />
     <Compile Include="Assets\Scripts\Common\Test\FPSDisplay.cs" />
     <Compile Include="Assets\Scripts\Common\LoadAssetBundles.cs" />
     <Compile Include="Assets\Scripts\Common\Constant.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Assets\Scripts\Common\iTween.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Scripts\PopupTraBeTong.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Scripts\Common\UIPool\VerticalPoolGroup.cs" />
     <Compile Include="Assets\Scripts\Common\Singleton.cs" />
@@ -139,15 +141,14 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\Game\PopupPause.cs" />
     <Compile Include="Assets\Scripts\Common\CanvasHelper.cs" />
+    <Compile Include="Assets\Scripts\PanelBetong.cs" />
     <Compile Include="Assets\Scripts\Game\EffectPlayer.cs" />
     <Compile Include="Assets\Scripts\Common\iTweenHelper.cs" />
     <Compile Include="Assets\Scripts\Common\UIPool\BasePoolGroup.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UIFade.cs" />
     <Compile Include="Assets\Scripts\PopupThuVien.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UIScale.cs" />
-    <Compile Include="Assets\Scripts\PopupTraBeTong.cs" />
-    <Compile Include="Assets\Scripts\PanelBetong.cs" />
-    <Compile Include="Assets\Scripts\PopupTraThep.cs" />
+    <Compile Include="Assets\Scripts\Toast.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DLL\Person.dll" />

@@ -6,8 +6,8 @@ public class HomeScene : MonoBehaviour
 {
     private void Start()
     {
-        Debug.Log("cdt 0 = " + DbManager.GetInstance().cdt[0].rsn);
-        
+        Screen.SetResolution(640, 1136, false);
+
     }
 
     #region  Button Click
