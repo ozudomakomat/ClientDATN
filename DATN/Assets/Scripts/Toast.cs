@@ -17,7 +17,7 @@ public class Toast : BasePopup
         ClosePopup();
     }
 
-    public static Toast ShowUp(string content)
+    public static Toast ShowToast(string content)
     {
         GameObject prefab = Utils.LoadPrefab("Prefabs/PopupToast");
         GameObject goPopup = GameObject.Instantiate(prefab, CanvasHelper.CanvasPopupPanel, false);

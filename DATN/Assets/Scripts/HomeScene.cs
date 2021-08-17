@@ -7,7 +7,6 @@ public class HomeScene : MonoBehaviour
     private void Start()
     {
         Screen.SetResolution(640, 1136, false);
-
     }
 
     #region  Button Click
@@ -22,6 +21,22 @@ public class HomeScene : MonoBehaviour
     public void ButtonCaculatorClick()
     {
         PopupCaculator.ShowUp();
+    }
+    public void ButtonTraThepClick()
+    {
+        PopupTraThep.ShowUp();
+    }
+    public void ButtonTraBetongClick()
+    {
+        PopupTraBeTong.ShowUp();
+    }
+    public void ButtonNoiSuy1CClick()
+    {
+        PopupNoiSuy1C.ShowUp();
+    }
+    public void ButtonNoiSuy2CClick()
+    {
+        PopupNoiSuy2c.ShowUp();
     }
     #endregion
 }

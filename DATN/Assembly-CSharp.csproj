@@ -76,6 +76,7 @@
     <Compile Include="Assets\NPLibrary\EventDispatcher\EventDataBinder.cs" />
     <Compile Include="Assets\NPLibrary\Test\UI\iPhoneX.cs" />
     <Compile Include="Assets\Scripts\Common\UIPool\HorizontalOrVerticalPoolGroup.cs" />
+    <Compile Include="Assets\Scripts\Toast.cs" />
     <Compile Include="Assets\Scripts\Entity.cs" />
     <Compile Include="Assets\Scripts\Common\Utils.cs" />
     <Compile Include="Assets\Scripts\PopupInfo.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\Common\UITransition\UIRotate.cs" />
     <Compile Include="Assets\Scripts\Game\CameraController.cs" />
     <Compile Include="Assets\Scripts\Common\ResourceHelper.cs" />
+    <Compile Include="Assets\Scripts\DataCaculator.cs" />
     <Compile Include="Assets\Scripts\Game\PopupSetting.cs" />
     <Compile Include="Assets\Scripts\PanelSteel.cs" />
     <Compile Include="Assets\Scripts\Common\AssetBundleManager.cs" />
@@ -133,10 +135,12 @@
     <Compile Include="Assets\Scripts\Common\Singleton.cs" />
     <Compile Include="Assets\Scripts\Common\GameResource\DataReward.cs" />
     <Compile Include="Assets\Scripts\Common\Manager\Game.cs" />
+    <Compile Include="Assets\Scripts\Network\DataSender.cs" />
     <Compile Include="Assets\Scripts\Common\Manager\GameLoader.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UITween.cs" />
     <Compile Include="Assets\Scripts\ItemCellThuVien.cs" />
     <Compile Include="Assets\NPLibrary\MainThread\Interface\Manager.cs" />
+    <Compile Include="Assets\Scripts\Network\NetworkController.cs" />
     <Compile Include="Assets\NPLibrary\Test\UI\Device.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\Game\PopupPause.cs" />
@@ -144,11 +148,13 @@
     <Compile Include="Assets\Scripts\PanelBetong.cs" />
     <Compile Include="Assets\Scripts\Game\EffectPlayer.cs" />
     <Compile Include="Assets\Scripts\Common\iTweenHelper.cs" />
+    <Compile Include="Assets\Scripts\Network\INetEventHandler.cs" />
     <Compile Include="Assets\Scripts\Common\UIPool\BasePoolGroup.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UIFade.cs" />
     <Compile Include="Assets\Scripts\PopupThuVien.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UIScale.cs" />
-    <Compile Include="Assets\Scripts\Toast.cs" />
+    <Compile Include="Assets\Scripts\PopupNoiSuy1C.cs" />
+    <Compile Include="Assets\Scripts\PopupNoiSuy2c.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DLL\Person.dll" />

@@ -15,8 +15,6 @@ public class PanelConcrete : MonoBehaviour
 
     List<string> m_DropConcrete = new List<string>();
     List<string> m_DropSteel = new List<string>();
-    int idConcree = 0;
-    int idSteel = 0;
 
     [System.Obsolete]
     private void OnDisable()
@@ -34,11 +32,10 @@ public class PanelConcrete : MonoBehaviour
         {
             m_DropConcrete.Add(item.name);
         });
-        DbManager.GetInstance().cdt.ForEach(item =>
-        {
-            m_DropSteel.Add(item.name);
-        });
-
+        for (int i = 0; i < 4; i++) {
+            List<CDT> cdt = DbManager.GetInstance().cdt;
+            m_DropSteel.Add(cdt[i].name);
+        }
     }
 
     private void Start()
@@ -75,15 +72,15 @@ public class PanelConcrete : MonoBehaviour
     }
     public void SetValueCapDoBen(int id)
     {
-        idConcree = id;
         m_Rb.text = DbManager.GetInstance().cdbt[id].cdcn.ToString();
         m_Eb.text = DbManager.GetInstance().cdbt[id].mddh.ToString();
+        DataCaculator.cdbt = DbManager.GetInstance().cdbt[id];
     }
     public void SetValueSteel(int id)
     {
-        idSteel = id;
         m_Rs.text = DbManager.GetInstance().cdt[id].cdcn.ToString();
         m_Rsc.text = DbManager.GetInstance().cdt[id].cdcntd.ToString();
         m_Es.text = DbManager.GetInstance().cdt[id].mddh.ToString();
+        DataCaculator.cdt = DbManager.GetInstance().cdt[id];
     }
 }
