@@ -4,15 +4,8 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 
-public class BaseScene : MonoBehaviour
+public class BaseScene :  MonoEventHandler
 {
-    protected virtual void Start() { 
-        
-    }
-    protected virtual void Awake()
-    {
-
-    }
     protected void LoadScene(string SceneName, bool playMusicScene = false, float volumn = 1f)
     {
         SceneManager.LoadScene(SceneName);
@@ -20,5 +13,9 @@ public class BaseScene : MonoBehaviour
             AudioClip sceneMusic = Utils.LoadAudioClip(SceneName);
             SoundManager.Instance.PlayMusicClip(sceneMusic, volumn);
         }
+    }
+    public override void ProcessKEvent(int eventId, object data)
+    {
+        base.ProcessKEvent(eventId, data);
     }
 }

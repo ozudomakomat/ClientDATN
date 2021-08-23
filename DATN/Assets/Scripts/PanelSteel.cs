@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SimpleJSON;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PanelSteel : MonoBehaviour
+public class PanelSteel : MonoEventHandler
 {
     [SerializeField] InputField m_TextN;
     [SerializeField] InputField m_TextMx;
@@ -53,35 +54,55 @@ public class PanelSteel : MonoBehaviour
         if (m_TextB.text == "") m_TextB.text = "220";
         if (m_TextH.text == "") m_TextH.text = "400";
         if (m_TextL.text == "") m_TextL.text = "3600";
-        DataNoiBo data = new DataNoiBo();
-        data.a = int.Parse(m_Texta.text);
-        if (data.a <= 0)
+        int a = int.Parse(m_Texta.text);
+        if (a <= 0)
         {
             Toast.ShowToast("a phải lớn hơn 0");
             return;
         }
-        data.Cy = int.Parse(m_TextB.text);
-        if (data.Cy <= 0)
+        int Cy = int.Parse(m_TextB.text);
+        if (Cy <= 0)
         {
-            Toast.ShowToast("B phải lớn hơn 0");
+            Toast.ShowToast("Cy phải lớn hơn 0");
             return;
         }
-        data.Cx = int.Parse(m_TextH.text);
-        if (data.Cx <= 0)
+        int Cx = int.Parse(m_TextH.text);
+        if (Cx <= 0)
         {
-            Toast.ShowToast("H phải lớn hơn 0");
+            Toast.ShowToast("Cx phải lớn hơn 0");
             return;
         }
-        data.L = int.Parse(m_TextL.text);
-        if (data.L <= 0)
+        int L = int.Parse(m_TextL.text);
+        if (L <= 0)
         {
             Toast.ShowToast("L phải lớn hơn 0");
             return;
         }
-        data.Mx = float.Parse(m_TextMx.text);
-        data.My = float.Parse(m_TextMy.text);
-        data.N = float.Parse(m_TextN.text);
-        TinhToanCot(data);
+        float Mx = float.Parse(m_TextMx.text);
+        float My = float.Parse(m_TextMy.text);
+        float N = float.Parse(m_TextN.text);
+        String urlConver = Utils.GetUrlCaculator(DataCaculator.GetInstance().groupId, DataCaculator.cdbt.id, DataCaculator.cdt.id, N,Mx,My,a,Cx,Cy,L);
+        m_DataSender.SendDataCaculator(urlConver);
+    }
+    public override void ProcessKEvent(int eventId, object data)
+    {
+        base.ProcessKEvent(eventId, data);
+        if (eventId == DataSender.CACULATOR)
+        {
+            byte[] bytes = (byte[])data;
+            string strData = System.Text.Encoding.UTF8.GetString(bytes);
+            Debug.Log("---- Data json: " + strData);
+            try
+            {
+                List<int> lstAssetInfo = new List<int>();
+                JSONArray jAsset = JSON.Parse(strData).AsArray;
+                Debug.Log("jAsset = " + jAsset.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                Toast.ShowToast(strData);
+            }
+        }
     }
     public void TinhToanCot(DataNoiBo tt)
     {
@@ -159,7 +180,8 @@ public class PanelSteel : MonoBehaviour
         _As = (tt.N * e1 - cdbt.cdcn * 100 * (b / 1000) * x * ((h0 / 1000) - 0.5f * x)) * 10000 / (cdt.cdcn * 100 * (za / 1000)); // cm2
         Ast = Ks * _As;
         u = Ast * 100 / ((b / 10) * (h / 10)); // %
-        Toast.ShowToast("Ast = " + Ast + " cm2 \n" + " muy% = " + u + " %");
+        //Toast.ShowToast("Ast = " + Ast + " cm2 \n" + " muy% = " + u + " %");
+        PopupResult.ShowUp("Ast = " + Ast + "cm2 \n \n muy % = " + u + " %");
     }
 
     public float trabangxi(int i, int j)

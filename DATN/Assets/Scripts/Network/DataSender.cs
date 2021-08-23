@@ -19,9 +19,9 @@ public class DataSender
 
     }
 
-    public void UpdateHeroSlot()
+    public void SendDataCaculator(String url)
     {
-        m_NetworkController.SendProtoPackage(CACULATOR);
+        m_NetworkController.SendHttpRequest(CACULATOR, url);
     }
 }
 

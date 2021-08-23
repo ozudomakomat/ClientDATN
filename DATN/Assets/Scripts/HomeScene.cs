@@ -1,10 +1,11 @@
+using SimpleJSON;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HomeScene : MonoBehaviour
+public class HomeScene : BaseScene
 {
-    private void Start()
+    protected override void Start()
     {
         Screen.SetResolution(640, 1136, false);
     }
@@ -39,4 +40,6 @@ public class HomeScene : MonoBehaviour
         PopupNoiSuy2c.ShowUp();
     }
     #endregion
+
+ 
 }

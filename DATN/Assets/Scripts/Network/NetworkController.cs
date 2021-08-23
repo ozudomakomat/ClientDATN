@@ -425,9 +425,6 @@ public class NetworkController : MonoBehaviour
             {
                 Toast.ShowToast(string.Format(MSG_ERRROR_SERVICE, serviceId));
                 Debug.LogError("--- Error: " + webRequest.error);
-                //
-               // PbAction pbActionNetworkError = Utils.GenNetworkErrorPbAction(serviceId);
-                //m_LstQueuedReceiveAction.Add(pbActionNetworkError);
             }
         }
     }

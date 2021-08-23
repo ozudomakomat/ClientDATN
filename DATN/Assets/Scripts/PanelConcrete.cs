@@ -12,6 +12,7 @@ public class PanelConcrete : MonoBehaviour
     [SerializeField] Text m_Rs;
     [SerializeField] Text m_Rsc;
     [SerializeField] Text m_Es;
+    [SerializeField] InputField m_GroupId;
 
     List<string> m_DropConcrete = new List<string>();
     List<string> m_DropSteel = new List<string>();
@@ -26,16 +27,22 @@ public class PanelConcrete : MonoBehaviour
     }
     private void Awake()
     {
+        m_GroupId.text = "1";
         m_ConCrete.ClearOptions();
         m_Steel.ClearOptions();
         DbManager.GetInstance().cdbt.ForEach(item =>
         {
             m_DropConcrete.Add(item.name);
         });
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++)
+        {
             List<CDT> cdt = DbManager.GetInstance().cdt;
             m_DropSteel.Add(cdt[i].name);
         }
+        m_GroupId.onValueChanged.AddListener(delegate
+        {
+            DataCaculator.GetInstance().groupId = int.Parse(m_GroupId.text);
+        });
     }
 
     private void Start()

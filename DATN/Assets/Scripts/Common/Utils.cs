@@ -9,9 +9,24 @@ using SimpleJSON;
 
 public class Utils
 {
-   
+    public static string GetUrlCaculator(int idGroup, int idBeTong, int idThep, float n, float mx, float my, int a, int cx, int cy, int l)
+    {
+        string url = DataCaculator.URL_BASE + "/api/caculator/{muid}_{idGroup}_{idBeTong}_{idThep}_{n}_{mx}_{my}_{a}_{cx}_{cy}_{l}";
+        //
+        url = url.Replace("{muid}", "" + DataCaculator.m_Udid);
+        url = url.Replace("{idGroup}", "" + idGroup);
+        url = url.Replace("{idBeTong}", "" + idBeTong);
+        url = url.Replace("{idThep}", "" + idThep);
+        url = url.Replace("{n}", "" + n);
+        url = url.Replace("{mx}", "" + mx);
+        url = url.Replace("{my}", "" + my);
+        url = url.Replace("{a}", "" + a);
+        url = url.Replace("{cx}", "" + cx);
+        url = url.Replace("{cy}", "" + cy);
+        url = url.Replace("{l}", "" + l);
+        return url;
+    }
 
- 
     public static PaddingInfo CalculateSafePadding(Vector2 canvasSize)
     {
         int screenW = Screen.width;
