@@ -30,10 +30,7 @@ public class PopupNoiSuy2c : BasePopup
         float Q12 = float.Parse(q12.text);
         float Q21 = float.Parse(q21.text);
         float Q22 = float.Parse(q22.text);
-        float z1 = DataCaculator.NoiSuy1C(X1, X2, Q11, Q11, X);
-        float z2 = DataCaculator.NoiSuy1C(X1, X2, Q21, Q22, X);
-        float z3 = DataCaculator.NoiSuy1C(Y1, Y2, z1, z2, Y);
-        kq.text = "Yns = " + z3;
+        m_DataSender.SendDataNoiSuy2C(X,X1,X2,Y,Y1,Y2,Q11,Q12,Q21,Q22);
     }
     public void ButtonDelClick()
     {
@@ -102,6 +99,15 @@ public class PopupNoiSuy2c : BasePopup
             return false;
         }
         return true;
+    }
+    public override void ProcessKEvent(int eventId, object data)
+    {
+        base.ProcessKEvent(eventId, data);
+        if (eventId == DataSender.NOISUY2C) {
+            byte[] bytes = (byte[])data;
+            string strData = System.Text.Encoding.UTF8.GetString(bytes);
+            kq.text = "Yns = " + strData;
+        }
     }
     public static PopupNoiSuy2c ShowUp()
     {

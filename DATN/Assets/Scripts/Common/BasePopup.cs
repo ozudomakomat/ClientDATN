@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BasePopup : MonoBehaviour
+public class BasePopup : MonoEventHandler
 {
     public GameObject m_GoContent;
-    protected virtual void Start()
+    protected override void Start()
     {
+        base.Awake();
         PopContentUp();
     }
     private void PopContentUp()

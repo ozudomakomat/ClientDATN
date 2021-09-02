@@ -20,8 +20,8 @@ public class PopupNoiSuy1C : BasePopup
         float X = float.Parse(x.text);
         float Y1 = float.Parse(y1.text);
         float Y2 = float.Parse(y2.text);
-        float Y = DataCaculator.NoiSuy1C(X1,X2,Y1,Y2,X);
-        y.text = "Yns = " + Y;
+        m_DataSender.SendDataNoiSuy1C(X, X1, X2, Y1, Y2);
+
     }
     private bool CheckInputData()
     {
@@ -52,6 +52,17 @@ public class PopupNoiSuy1C : BasePopup
         }
         return true;
     }
+    public override void ProcessKEvent(int eventId, object data)
+    {
+        base.ProcessKEvent(eventId, data);
+        if (eventId == DataSender.NOISUY1C)
+        {
+            byte[] bytes = (byte[])data;
+            string strData = System.Text.Encoding.UTF8.GetString(bytes);
+            y.text = "Yns = " + strData;
+        }
+    }
+
     public static PopupNoiSuy1C ShowUp()
     {
         GameObject prefab = Utils.LoadPrefab("Prefabs/PopupNoiSuy1C");

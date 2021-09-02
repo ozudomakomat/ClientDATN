@@ -19,6 +19,9 @@ public class HomeScene : BaseScene
     {
         PopupInfo.ShowUp();
     }
+    public void ButtonLichSuTinhToanClick() {
+        PopupThuVien.ShowUp();
+    }
     public void ButtonCaculatorClick()
     {
         PopupCaculator.ShowUp();

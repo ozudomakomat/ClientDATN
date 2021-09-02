@@ -146,6 +146,7 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\Game\PopupPause.cs" />
     <Compile Include="Assets\Scripts\Common\CanvasHelper.cs" />
+    <Compile Include="Assets\Scripts\MonoEventHandler.cs" />
     <Compile Include="Assets\Scripts\PanelBetong.cs" />
     <Compile Include="Assets\Scripts\Game\EffectPlayer.cs" />
     <Compile Include="Assets\Scripts\Common\iTweenHelper.cs" />
@@ -156,7 +157,7 @@
     <Compile Include="Assets\Scripts\Common\UITransition\UIFade.cs" />
     <Compile Include="Assets\Scripts\PopupThuVien.cs" />
     <Compile Include="Assets\Scripts\Common\UITransition\UIScale.cs" />
-    <Compile Include="Assets\Scripts\MonoEventHandler.cs" />
+    <Compile Include="Assets\Scripts\PopupDraw2d.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DLL\Person.dll" />

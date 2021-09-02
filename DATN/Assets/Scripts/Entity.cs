@@ -32,4 +32,33 @@ public class DataNoiBo
     public int Cy;
     public int Cx;
     public int L;
+
+    public DataNoiBo(float n, float mx, float my, int a, int cx, int cy, int l)
+    {
+        N = n;
+        Mx = mx;
+        My = my;
+        this.a = a;
+        Cy = cy;
+        Cx = cx;
+        L = l;
+    }
+
+    
+}
+
+public class History {
+    public string udid;
+    public int id;
+    public int idBeTong;
+    public int idThep;
+    public float n;
+    public float mx;
+    public float my;
+    public int a;
+    public int b;
+    public int h;
+    public int l;
+    public float ast;
+    public float muy;
 }

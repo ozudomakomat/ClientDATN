@@ -14,17 +14,14 @@ public class PopupCaculator : BasePopup
     private int indexConcree = 0;
     private int indexSteel = 1;
 
-    private void Awake()
+    protected override void Awake()
     {
         ActivePanel(indexConcree);
+        panelSteel.GetComponent<PanelSteel>().m_ReCacu += delegate {
+            ActivePanel(indexConcree);
+        };
     }
-    public static PopupCaculator ShowUp()
-    {
-        GameObject prefab = Utils.LoadPrefab("Prefabs/PopupCaculator");
-        GameObject goPopup = GameObject.Instantiate(prefab, CanvasHelper.CanvasPopupPanel, false);
-        PopupCaculator pop = goPopup.GetComponent<PopupCaculator>();
-        return pop;
-    }
+   
     public void ButtonNextClick()
     {
         ActivePanel(indexSteel);
@@ -56,5 +53,13 @@ public class PopupCaculator : BasePopup
                     break;
                 }
         }
+    }
+
+    public static PopupCaculator ShowUp()
+    {
+        GameObject prefab = Utils.LoadPrefab("Prefabs/PopupCaculator");
+        GameObject goPopup = GameObject.Instantiate(prefab, CanvasHelper.CanvasPopupPanel, false);
+        PopupCaculator pop = goPopup.GetComponent<PopupCaculator>();
+        return pop;
     }
 }

@@ -14,6 +14,7 @@ public class BaseScene :  MonoEventHandler
             SoundManager.Instance.PlayMusicClip(sceneMusic, volumn);
         }
     }
+   
     public override void ProcessKEvent(int eventId, object data)
     {
         base.ProcessKEvent(eventId, data);

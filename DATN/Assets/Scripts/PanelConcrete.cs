@@ -27,7 +27,6 @@ public class PanelConcrete : MonoBehaviour
     }
     private void Awake()
     {
-        m_GroupId.text = "1";
         m_ConCrete.ClearOptions();
         m_Steel.ClearOptions();
         DbManager.GetInstance().cdbt.ForEach(item =>

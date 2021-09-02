@@ -90,7 +90,7 @@ public class NetworkController : MonoBehaviour
             }
             else
             {
-                Debug.LogError("----- ERROR: NetEventHandler not in list");
+              //  Debug.LogError("----- ERROR: NetEventHandler not in list");
             }
         }
     }
