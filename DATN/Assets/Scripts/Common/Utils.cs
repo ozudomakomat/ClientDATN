@@ -9,7 +9,7 @@ using SimpleJSON;
 
 public class Utils
 {
- 
+
     public static PaddingInfo CalculateSafePadding(Vector2 canvasSize)
     {
         int screenW = Screen.width;
@@ -554,6 +554,12 @@ public class Utils
         }
         return lstBn;
 
+    }
+    public static string converTickToTime(long time)
+    {
+        System.DateTime dtDateTime = new System.DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+        dtDateTime = dtDateTime.AddSeconds(time).ToLocalTime();
+        return dtDateTime.ToString();
     }
     public static List<long> ConvertStringToListLong(string json)
     {

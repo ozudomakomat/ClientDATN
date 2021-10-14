@@ -33,17 +33,32 @@ public class PopupDraw2d : BasePopup
     [SerializeField] RectTransform m_CotThepBot;
     //dim 
     [SerializeField] RectTransform m_ImgDimRight;
-
+    // 10 thanh
+    [SerializeField] RectTransform m_10_1;
+    [SerializeField] RectTransform m_10_2;
+    [SerializeField] RectTransform m_10_3;
+    [SerializeField] RectTransform m_10_4;
+    // 6 thanh
+    [SerializeField] GameObject m_6;
+    // 8 thanh
+    [SerializeField] RectTransform m_8_1;
+    [SerializeField] RectTransform m_8_2;
+    // cau tao 
+    [SerializeField] RectTransform cauTaoGiua;
+    [SerializeField] RectTransform cauTaoGiua2;
+    // Thong Ke
+    [SerializeField] GameObject m_BtnThongKe;
     // caculator
     DataNoiBo data;
     private bool isLight = false;
-
+    private float scale;
 
     protected override void Awake()
     {
         base.Awake();
         data = DataCaculator.data;
         CaculatorImage();
+        ActiveThepDoc(DataCaculator.boTriThep.soluong);
     }
 
     protected override void Start()
@@ -51,27 +66,29 @@ public class PopupDraw2d : BasePopup
         base.Start();
         int cd_3 = data.L / 3;
         SetTextDim(cd_3, data.L);
-        SetTextPhi("Ø8 a150", "Ø8 a250");
-        SetTextPhiThep("Ø18");
+        SetTextPhi("Ø8 a200", "Ø8 a300");
+        SetTextPhiThep("Ø" + DataCaculator.boTriThep.phi);
         SetKichThuocCot(data.Cx, data.Cy);
     }
     private void CaculatorImage()
     {
         float width = m_ImgFxT1.rect.width;
-        float op = (Mathf.Abs( m_ImgLeft.anchoredPosition.x) - Mathf.Abs(m_ImgThepDaiLeft.anchoredPosition.x))*2 ;
+        float op = (Mathf.Abs(m_ImgLeft.anchoredPosition.x) - Mathf.Abs(m_ImgThepDaiLeft.anchoredPosition.x)) * 2;
         float percent = (float)(data.Cy) / (float)data.Cx;
         int addHeight = (int)(width * percent);
-        m_ImgRight.sizeDelta = new Vector2(3, addHeight);
-        m_ImgLeft.sizeDelta = new Vector2(3, addHeight);
-        m_ImgThepDaiLeft.sizeDelta = new Vector2(3, addHeight -op);
-        m_ImgThepDaiRight.sizeDelta = new Vector2(3, addHeight - op);
+        int line_cotDai = 2;
+        int line_Cot = 3;
+        m_ImgRight.sizeDelta = new Vector2(line_Cot, addHeight);
+        m_ImgLeft.sizeDelta = new Vector2(line_Cot, addHeight);
+        m_ImgThepDaiLeft.sizeDelta = new Vector2(line_cotDai, addHeight - op - 5);
+        m_ImgThepDaiRight.sizeDelta = new Vector2(line_cotDai, addHeight - op - 5);
         //
         Vector3 fxT = m_ImgFxT1.anchoredPosition;
         fxT.y = addHeight / 2;
         m_ImgFxT1.anchoredPosition = fxT;
         //
         fxT = m_ImgFxT2.anchoredPosition;
-        fxT.y = (addHeight - op)/2;
+        fxT.y = (addHeight - op) / 2;
         m_ImgFxT2.anchoredPosition = fxT;
         //
         fxT = m_ImgFxB1.anchoredPosition;
@@ -79,7 +96,7 @@ public class PopupDraw2d : BasePopup
         m_ImgFxB1.anchoredPosition = fxT;
         //
         fxT = m_ImgFxB2.anchoredPosition;
-        fxT.y = -(addHeight - op)/2;
+        fxT.y = -(addHeight - op) / 2;
         m_ImgFxB2.anchoredPosition = fxT;
         //
         fxT = m_CotThepTop.anchoredPosition;
@@ -89,9 +106,31 @@ public class PopupDraw2d : BasePopup
         fxT = m_CotThepBot.anchoredPosition;
         fxT.y = -(addHeight - op) / 2 + 6;
         m_CotThepBot.anchoredPosition = fxT;
+
+        // 8 thanh
+        fxT = m_8_1.anchoredPosition;
+        fxT.y = (addHeight - op) / 6f; 
+        m_8_1.anchoredPosition = fxT;
+        fxT = m_8_2.anchoredPosition;
+        fxT.y = -(addHeight - op) / 6f;
+        m_8_2.anchoredPosition = fxT;
+
         // dim right
-        m_ImgDimRight.sizeDelta = new Vector2(3, addHeight + 30);
+        m_ImgDimRight.sizeDelta = new Vector2(line_Cot, addHeight + 30);
+        // 10 thanh
+        cauTaoGiua.sizeDelta = new Vector2(line_cotDai, addHeight - op - 10);
+        cauTaoGiua2.sizeDelta = new Vector2(line_cotDai, addHeight - op - 10);
+        fxT = m_10_1.anchoredPosition;
+        fxT.x = width / 4;
+        m_10_1.anchoredPosition = fxT;
+        m_10_4.anchoredPosition = fxT;
+
+        fxT = m_10_2.anchoredPosition;
+        fxT.x = 115 - width / 4;
+        m_10_2.anchoredPosition = fxT;
+        m_10_3.anchoredPosition = fxT;
     }
+
     private void SetTextDim(int cd, int l)
     {
         m_TextDim2.text = (l - cd) + "";
@@ -127,6 +166,21 @@ public class PopupDraw2d : BasePopup
             isLight = true;
         }
     }
+    public void ButtonThongKeClick()
+    {
+        if (scale == 0 || scale == 1)
+        {
+            scale = 3f;
+            m_BtnThongKe.GetComponent<RectTransform>().localScale = new Vector3(scale, scale, 1.0f);
+            return;
+        }
+        if (scale == 3)
+        {
+            scale = 1f;
+            m_BtnThongKe.GetComponent<RectTransform>().localScale = new Vector3(scale, scale, 1.0f);
+            return;
+        }
+    }
     public void ButtonDarkClick()
     {
         if (isLight)
@@ -134,6 +188,52 @@ public class PopupDraw2d : BasePopup
             m_Bg.color = Color.black;
             isLight = false;
         }
+    }
+
+    private void ActiveThepDoc(int soluong)
+    {
+        switch (soluong)
+        {
+            case 4:
+                {
+                    DisableThepDoc();
+                    break;
+                }
+            case 6:
+                {
+                    DisableThepDoc();
+                    m_6.SetActive(true);
+                    break;
+                }
+            case 8:
+                {
+                    DisableThepDoc();
+                    m_8_1.gameObject.SetActive(true);
+                    m_8_2.gameObject.SetActive(true);
+                    break;
+                }
+            case 10:
+                {
+                    DisableThepDoc();
+                    m_10_1.gameObject.SetActive(true);
+                    m_10_2.gameObject.SetActive(true);
+                    m_10_3.gameObject.SetActive(true);
+                    m_10_4.gameObject.SetActive(true);
+                    m_6.SetActive(true);
+                    break;
+                }
+        }
+    }
+
+    private void DisableThepDoc()
+    {
+        m_10_1.gameObject.SetActive(false);
+        m_10_2.gameObject.SetActive(false);
+        m_10_3.gameObject.SetActive(false);
+        m_10_4.gameObject.SetActive(false);
+        m_6.SetActive(false);
+        m_8_1.gameObject.SetActive(false);
+        m_8_2.gameObject.SetActive(false);
     }
 
 

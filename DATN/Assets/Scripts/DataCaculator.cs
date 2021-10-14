@@ -23,6 +23,8 @@ public class DataCaculator
     public static CDT cdt;
     public static DataNoiBo data;
     public int groupId;
+    public int soLuongThep;
+    public static BoTriThep boTriThep;
 
     public static float NoiSuy1C(float x1, float x2, float y1, float y2, float x)
     {
