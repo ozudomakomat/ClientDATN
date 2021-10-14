@@ -61,4 +61,16 @@ public class History {
     public int l;
     public float ast;
     public float muy;
+    public string date;
+}
+public class BoTriThep
+{
+    public int soluong;
+    public int phi;
+
+    public BoTriThep(int soluong, int phi)
+    {
+        this.soluong = soluong;
+        this.phi = phi;
+    }
 }

@@ -18,7 +18,7 @@ public class PopupResult : BasePopup
     [SerializeField] Text m_TextAs;
     [SerializeField] Text m_TextMuy;
     public Action mAction;
-
+    private float m_Ast;
     private void SetData(int gr, float lamdax, float lamday, float x1, float m0, float m, float e0, float e1, float x, float Ast, float muy)
     {
         m_TextGr.text = gr + "";
@@ -32,6 +32,7 @@ public class PopupResult : BasePopup
         m_Textx.text = Math.Round(x, 2) + " mm";
         m_TextAs.text = Math.Round(Ast, 2) + " mm2";
         m_TextMuy.text = Math.Round(muy, 2) +  " %";
+        m_Ast = (float)Math.Round(Ast, 2);
     }
 
     public void ButtonNewCacuClick()
@@ -41,7 +42,7 @@ public class PopupResult : BasePopup
     }
 
     public void ButtonDraw2DClick() {
-        PopupDraw2d.ShowUp();
+        PopupNhapThep.ShowUp(m_Ast);
     }
     
     public static PopupResult ShowUp(int gr, float lamdax, float lamday, float x1, float m0, float m, float e0, float e1, float x, float Ast, float muy)

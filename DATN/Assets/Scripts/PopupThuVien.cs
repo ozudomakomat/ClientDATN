@@ -40,7 +40,8 @@ public class PopupThuVien : BasePopup
             PanelList.SetActive(true);
         }
     }
-    public void ButtonBackClick() {
+    public void ButtonBackClick()
+    {
         ShowTabById(INDEX_PANEL_INPUT);
     }
 
@@ -51,7 +52,7 @@ public class PopupThuVien : BasePopup
         {
             m_GoCellPrefab.SetActive(false);
         }
-        
+
     }
 
     public void ButtonTraCuuClick()
@@ -90,7 +91,7 @@ public class PopupThuVien : BasePopup
                     return;
                 }
                 List<History> historys = new List<History>();
-                for (int i = 0; i < lstr.Count; i += 12)
+                for (int i = 0; i < lstr.Count; i += 13)
                 {
                     History his = new History();
                     his.id = int.Parse(lstr[i]);
@@ -105,8 +106,9 @@ public class PopupThuVien : BasePopup
                     his.l = int.Parse(lstr[i + 9]);
                     his.ast = float.Parse(lstr[i + 10]);
                     his.muy = float.Parse(lstr[i + 11]);
+                    his.date ="Ngày tạo : "+ Utils.converTickToTime(long.Parse(lstr[i + 12]));
                     historys.Add(his);
-                }
+                } 
                 m_PoolItem.setAdapter(Utils.GenListObject(historys));
                 ShowTabById(INDEX_PANEL_LIST);
             }

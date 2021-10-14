@@ -18,6 +18,7 @@ public class ItemCellThuVien : MonoBehaviour
     [SerializeField] Text m_Textl;
     [SerializeField] Text m_Textas;
     [SerializeField] Text m_Textmuy;
+    [SerializeField] Text m_TextDate;
 
     public void SetData(History data)
     {
@@ -33,5 +34,6 @@ public class ItemCellThuVien : MonoBehaviour
         m_Textl.text = data.l.ToString();
         m_Textas.text = Math.Round(data.ast, 2) + "";
         m_Textmuy.text = Math.Round(data.muy, 2) + "";
+        m_TextDate.text = data.date;
     }
 }

@@ -14,7 +14,7 @@ public class PopupInfo : BasePopup
         m_TextTop.text = "TRƯỜNG ĐẠI HỌC XÂY DỰNG \n KHOA CÔNG NGHỆ THÔNG TIN \n BỘ MÔN TIN HỌC XÂY DỰNG";
         m_TextMid.text = "ĐỒ ÁN TỐT NGHIỆP";
         m_TextContent.text = "Sinh viên thực hiện \n Mã số sinh viên\n Lớp\n Chuyên ngành\n Giảng viên hướng dẫn";
-        m_TextOutPut.text = ": Nguyễn Đình Tú \n: 546859 \n: 59TH1 \n: Tin học xây dựng \n: PGS.TS.Trần An Bình";
+        m_TextOutPut.text = ": Nguyễn Đình Tú \n: 546859 \n: 59TH1 \n: Tin học xây dựng \n: PGS.TS.Trần Anh Bình";
     }
     public static PopupInfo ShowUp()
     {
